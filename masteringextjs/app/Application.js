@@ -9,18 +9,16 @@ function loadLocale(){
 	console.log('lang--------------------------'+lang);
 	var file = Ext.util.Format.format("../resources/locale/{0}.js", lang);
 	console.log("in function loadLocale!");
-	//Ext.Loader.require({url: file, onError: function(){
-	//console.log('loadScript run success!');
-	//	alert('Error loading locale file. Please contact system administrator.');
-	//}});
-	//Ext.require( file,function(){alert(123)});
-	Ext.Loader.setConfig({  
-		enabled:true,  
-		paths:{
-			ppd:file  
-	}}); 
+	Ext.Loader.loadScript({url: file, onError: function(){
+		console.log('loadScript run success!');
+		alert('Error loading locale file. Please contact system administrator.');
+	}});
+	
+	var extJsFile = Ext.util.Format.format("ext/packages/ext-locale/build/ext-locale-{0}.js", lang);
+	Ext.Loader.loadScript({url: extJsFile});
+
    // console.log(translations);
-	console.log(file);
+	console.log('-----------------'+extJsFile);
 }
 	
 	loadLocale(); //##1
@@ -49,5 +47,6 @@ Ext.define('Packet.Application', {
 	init: function () {
 		Ext.create('Packt.view.login.Login');
 	}
+	
 });
   
