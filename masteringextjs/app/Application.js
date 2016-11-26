@@ -9,6 +9,7 @@ function loadLocale(){
 	console.log('lang--------------------------'+lang);
 	var file = Ext.util.Format.format("../resources/locale/{0}.js", lang);
 	console.log("in function loadLocale!");
+
 	Ext.Loader.loadScript({url: file, onError: function(){
 		console.log('loadScript run success!');
 		alert('Error loading locale file. Please contact system administrator.');
@@ -19,6 +20,14 @@ function loadLocale(){
 
    // console.log(translations);
 	console.log('-----------------'+extJsFile);
+
+	Ext.Loader.setConfig({  
+		enabled:true,  
+		paths:{
+			ppd:file  
+	}}); 
+   // console.log(translations);
+	console.log(file);
 }
 	
 	loadLocale(); //##1
@@ -36,6 +45,11 @@ Ext.define('Packet.Application', {
 	view: [
 		'login.Login'	
 	],
+	
+	controllers: [
+		//'Root',
+		'Menu'
+	],
 
     launch: function () {
         // TODO - Launch the application
@@ -47,6 +61,5 @@ Ext.define('Packet.Application', {
 	init: function () {
 		Ext.create('Packt.view.login.Login');
 	}
-	
 });
   

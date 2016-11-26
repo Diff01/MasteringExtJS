@@ -11,6 +11,7 @@ Ext.define('Packt.view.locale.Translation', {
 
 	menu: {								//#3
 		xtype: 'menu',					//#4
+
 		defaults:{
 			listeners: {
 				click: 'onMenuItemClick'

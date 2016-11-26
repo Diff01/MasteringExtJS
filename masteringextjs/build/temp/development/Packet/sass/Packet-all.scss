@@ -1,4 +1,4 @@
-$image-search-path: 'D:/Program Files/xamppB/htdocs/masteringextjs/build/development/Packet/resources';
+$image-search-path: 'D:/Program Files/xamppB/htdocs/gitPro/MasteringExtJS/masteringextjs/build/development/Packet/resources';
 $theme-name:  'ext-theme-neptune' !default;
 $include-ext-abstractcomponent: true;
 $include-ext-abstractcontainer: true;
@@ -912,6 +912,7 @@ $include-packet-application: true;
 $include-packet-view-main-main: true;
 $include-packet-view-main-maincontroller: true;
 $include-packet-view-main-mainmodel: true;
+$include-packt-controller-menu: true;
 $include-packt-util-sessionmonitor: true;
 $include-packt-util-util: true;
 $include-packt-view-locale-translation: true;
@@ -922,6 +923,8 @@ $include-packt-view-login-logincontroller: true;
 $include-packt-view-main-footer: true;
 $include-packt-view-main-header: true;
 $include-packt-view-main-pannel: true;
+$include-packt-view-menu-accordion: true;
+$include-packt-view-menu-tree: true;
 /* including package ext-theme-base */
 @import '../../../../../ext/packages/ext-theme-base/sass/etc/all';
 /* including package ext-theme-neutral */

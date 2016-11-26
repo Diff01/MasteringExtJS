@@ -18,7 +18,9 @@ Ext.define('Packt.view.login.Login', {
 		type: 'fit'
 	},
 	iconCls: 'fa fa-key fa-lg',
+
 	title: 'login',
+
 	closeAction: 'hide',
 	closable: false,
 	draggable: false,

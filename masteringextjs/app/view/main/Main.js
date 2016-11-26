@@ -5,6 +5,10 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
+ requires: [
+	'Packt.view.menu.Accordion'
+ ],
+
 Ext.define('Packet.view.main.Main', {
     extend: 'Ext.container.Container',
 
@@ -40,9 +44,10 @@ Ext.define('Packet.view.main.Main', {
 		xtype: 'appfooter',  //#3
 		region: 'south'
 	},{
-		xtype: 'container',  //#4
+		//xtype: 'container',  //#4
+		xtype: 'mainmenu',
 		region: 'west',
-		width: 200,
-		split: true
+		//width: 200,
+		//split: true
  	}]
 });
